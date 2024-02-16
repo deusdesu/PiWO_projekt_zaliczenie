@@ -1,12 +1,13 @@
+# -*- coding: utf-8 -*-
 import json
 
-from Repozytorium.samochod.samochod import read_csv, update_csv
+from Repozytorium.zarzadzanieFlotaPojazdow.abstractRepository import read_csv, update_csv
 
 
-def add_car_from_json(json_data):
-    data = read_csv()
+def add_data_from_json(json_data, PATH):
+    data = read_csv(PATH)
     car_data = dodajId(data, json_data)
-    update_csv([car_data])
+    update_csv([car_data], PATH)
 
 
 def dodajId(data, json_data):

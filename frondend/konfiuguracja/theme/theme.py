@@ -3,6 +3,7 @@ theme_menu = ['menu',
                'Dark',
                'BlueMono',
                'HotDogStand',
+               'Black',
                'random hehe',
                ]
               ]

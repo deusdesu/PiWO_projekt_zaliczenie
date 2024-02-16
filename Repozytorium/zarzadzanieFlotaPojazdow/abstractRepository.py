@@ -1,9 +1,8 @@
+# -*- coding: utf-8 -*-
 import csv
 
-PATH = 'bazaDanych/samochod.csv'
 
-
-def read_csv():
+def read_csv(PATH):
     data = []
     with open(PATH, 'r', newline='') as csvfile:
         # print(csvfile)
@@ -13,7 +12,7 @@ def read_csv():
     return data
 
 
-def update_csv(new_data):
+def update_csv(new_data,PATH):
     fieldnames = new_data[0].keys()
     with open(PATH, 'a', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
