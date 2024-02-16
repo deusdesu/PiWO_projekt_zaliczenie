@@ -58,7 +58,7 @@ def okno3Obsluga(event, values, window):
     if event == 'OKOkno3':
         add_car_from_json(values)
         print(values)
-        powrotDoOknaGlownego(window)
+        window = powrotDoOknaGlownego(window)
     return window
 if __name__ == '__main__':
     start()
