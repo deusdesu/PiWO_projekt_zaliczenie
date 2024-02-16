@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+from backend.servis.samochodServis import add_car_from_json
 from frondend.oknaGlowne.okno2.okno import okno2
 from frondend.oknaGlowne.okno3.okno import okno3
 
@@ -13,7 +14,7 @@ def start():
         if event == sg.WIN_CLOSED:
             break
         window = okno2Przyciski(event, window)
-        test(event, values)
+        window = okno3Obsluga(event, values, window)
         window = przyciskPowrot(event, window)
 
     window.close()
@@ -21,8 +22,13 @@ def start():
 
 def przyciskPowrot(event, window):
     if event == 'powrot':
-        window.close()  # Zamknij aktualne okno (okno2)
-        window = okno2()  # Otwórz okno3 jako nowe okno
+        window = powrotDoOknaGlownego(window)
+    return window
+
+
+def powrotDoOknaGlownego(window):
+    window.close()  # Zamknij aktualne okno (okno2)
+    window = okno2()  # Otwórz okno3 jako nowe okno
     return window
 
 
@@ -48,10 +54,11 @@ def okno2Przyciski(event, window):
     return window
 
 
-def test(event, values):
+def okno3Obsluga(event, values, window):
     if event == 'OKOkno3':
+        add_car_from_json(values)
         print(values)
-
-
+        powrotDoOknaGlownego(window)
+    return window
 if __name__ == '__main__':
     start()
