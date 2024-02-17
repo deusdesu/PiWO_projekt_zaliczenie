@@ -5,7 +5,7 @@ from src.Repozytorium.bazaDanychStrategy.enumPath import SERWIS_PATH, SAMOCHOD_P
 from src.Repozytorium.zarzadzanieFlotaPojazdow.abstractRepository import read_csv
 
 
-def generate_table_data(data):
+def generate_table_from_database(data):
     if not data:
         return []
     headings = list(data[0].keys())
@@ -19,7 +19,7 @@ def generate_table_data(data):
 
 
 def create_table_from_database(PATH):
-    return generate_table_data(read_csv(PATH))
+    return generate_table_from_database(read_csv(PATH))
 
 
 def podajDaneTegoAuta(idSamochodu, samochod_dane):
@@ -46,4 +46,4 @@ def generate_table_from_json():
     return serwis_dane
 
 def create_extended_table_for_serwis():
-    return generate_table_data(generate_table_from_json())
+    return generate_table_from_database(generate_table_from_json())

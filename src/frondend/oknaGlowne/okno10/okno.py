@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 
 from src.frondend.konfiuguracja.theme.theme import globalTheme
-
+from src.frondend.logo.logoHeader import zwrocOkno
 
 def poleTytulowe10():
     return sg.Text('Zgłaszanie usterki',
@@ -26,4 +26,4 @@ def okno10():
         [sg.Button('Zgłoś' ,key='OKOkno10', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
 
     ]
-    return sg.Window('Converter', layout)
+    return zwrocOkno('Converter', layout)

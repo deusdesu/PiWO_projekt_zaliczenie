@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 
 from src.frondend.konfiuguracja.theme.theme import globalTheme
-
+from src.frondend.logo.logoHeader import zwrocOkno
 
 def poleTytulowe7():
     return sg.Text('Podjęcie samochodu',
@@ -26,4 +26,4 @@ def okno7():
         [sg.Button('Podejmij' ,key='OKOkno7', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
 
     ]
-    return sg.Window('Converter', layout)
+    return zwrocOkno('Converter', layout)

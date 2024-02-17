@@ -4,7 +4,7 @@ import PySimpleGUI as sg
 from src.Repozytorium.bazaDanychStrategy.enumPath import SAMOCHOD_PATH
 from src.backend.servis.abstract.abstractCrateTable import create_table_from_database
 from src.frondend.konfiuguracja.theme.theme import globalTheme
-
+from src.frondend.logo.logoHeader import zwrocOkno
 
 def poleTytulowe5():
     return sg.Text('Przegląd floty',
@@ -27,4 +27,4 @@ def okno5():
         [sg.OK(key='OKOkno5', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
 
     ]
-    return sg.Window('Converter', layout)
+    return zwrocOkno('Converter', layout)

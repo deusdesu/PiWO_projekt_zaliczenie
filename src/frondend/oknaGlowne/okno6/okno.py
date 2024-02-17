@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 from src.Repozytorium.bazaDanychStrategy.enumPath import KIEROWCA_PATH
 from src.backend.servis.abstract.abstractCrateTable import create_table_from_database
 from src.frondend.konfiuguracja.theme.theme import globalTheme
-
+from src.frondend.logo.logoHeader import zwrocOkno
 
 def poleTytulowe6():
     return sg.Text('Przegląd kierowców',
@@ -25,4 +25,4 @@ def okno6():
         [sg.OK(key='OKOkno6', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
 
     ]
-    return sg.Window('Converter', layout)
+    return zwrocOkno('Converter', layout)

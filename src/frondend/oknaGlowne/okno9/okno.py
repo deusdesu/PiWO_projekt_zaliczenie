@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 from src.backend.servis.serwisSerwis.serwis import zwroc_tabele
 from src.frondend.konfiuguracja.theme.theme import globalTheme
-
+from src.frondend.logo.logoHeader import zwrocOkno
 
 def poleTytulowe9():
     return sg.Text('Serwis',
@@ -26,4 +26,4 @@ def okno9():
         [sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1))],
 
     ]
-    return sg.Window('Converter', layout)
+    return zwrocOkno('Converter', layout)
