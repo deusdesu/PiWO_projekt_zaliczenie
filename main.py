@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import PySimpleGUI as sg
 
-from Repozytorium.bazaDanychStrategy.enumPath import SAMOCHOD_PATH, KIEROWCA_PATH
-from backend.servis.abstractCrateTable import create_table
-from backend.servis.abstractDodajDaneServices import add_data_from_json
+from Repozytorium.bazaDanychStrategy.enumPath import SAMOCHOD_PATH, KIEROWCA_PATH, SERWIS_PATH
+from Repozytorium.bazaDanychStrategy.enumStatusSamochodu import ENUM_SERWIS
+from Repozytorium.zarzadzanieFlotaPojazdow.abstractRepository import update_csv
+from backend.servis.abstract.abstractDodajDaneServices import add_data_from_json
+from backend.servis.serwisSerwis.serwis import obsluga_zglos_usterke, obsluga_usun_usterke
 from frondend.oknaGlowne.okno10.okno import okno10
 from frondend.oknaGlowne.okno2.okno import okno2
 from frondend.oknaGlowne.okno3.okno import okno3
@@ -26,6 +28,8 @@ def start():
         window = okno2Przyciski(event, window)
         window = okno3Obsluga(event, values, window)
         window = okno4Obsluga(event, values, window)
+        window = okno10Obsluga(event, values, window)
+        window = okno9przyciskUsunUsterke(event, values, window)
         # window = okno5Obsluga(event, window)
         window = przyciskPowrot(event, window)
 
@@ -34,13 +38,19 @@ def start():
 
 def przyciskPowrot(event, window):
     if event == 'powrot':
-        window = powrotDoOknaGlownego(window)
+        window = przejdzDoOknaGlownego(window)
     return window
 
 
-def powrotDoOknaGlownego(window):
+def przejdzDoOknaGlownego(window):
     window.close()  # Zamknij aktualne okno (okno2)
     window = okno2()  # Otwórz okno3 jako nowe okno
+    return window
+
+
+def przejdzDoFlotyPojazdow(window):
+    window.close()  # Zamknij aktualne okno (okno2)
+    window = okno5()  # Otwórz okno3 jako nowe okno
     return window
 
 
@@ -84,7 +94,7 @@ def okno3Obsluga(event, values, window):
     if event == 'OKOkno3':
         add_data_from_json(values, SAMOCHOD_PATH)
         print(values)
-        window = powrotDoOknaGlownego(window)
+        window = przejdzDoOknaGlownego(window)
     return window
 
 
@@ -92,7 +102,23 @@ def okno4Obsluga(event, values, window):
     if event == 'OKOkno4':
         add_data_from_json(values, KIEROWCA_PATH)
         print(values)
-        window = powrotDoOknaGlownego(window)
+        window = przejdzDoOknaGlownego(window)
+    return window
+
+
+def okno10Obsluga(event, values, window):
+    if event == 'OKOkno10':
+        print('przejdz do serwisu')
+        obsluga_zglos_usterke(values)
+        window = przejdzDoFlotyPojazdow(window)
+    return window
+
+
+def okno9przyciskUsunUsterke(event, values, window):
+    if event == 'OKOkno9':
+        print(event, values)
+        obsluga_usun_usterke(values)
+        window = przejdzDoFlotyPojazdow(window)
     return window
 
 

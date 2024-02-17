@@ -9,7 +9,6 @@ def add_data_from_json(json_data, PATH):
     car_data = dodajId(data, json_data)
     update_csv([car_data], PATH)
 
-
 def dodajId(data, json_data):
     new_car_id = len(data) + 1
     json_data['Id'] = str(new_car_id)

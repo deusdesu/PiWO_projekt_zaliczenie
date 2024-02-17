@@ -23,7 +23,7 @@ def okno10():
 
 
 
-        [sg.Button('Podejmij' ,key='OKOkno10', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
+        [sg.Button('Zgłoś' ,key='OKOkno10', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
 
     ]
     return sg.Window('Converter', layout)

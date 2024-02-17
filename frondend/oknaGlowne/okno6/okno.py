@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 
 from Repozytorium.bazaDanychStrategy.enumPath import KIEROWCA_PATH
-from backend.servis.abstractCrateTable import create_table
+from backend.servis.abstract.abstractCrateTable import create_table
 from frondend.konfiuguracja.theme.theme import globalTheme
 
 

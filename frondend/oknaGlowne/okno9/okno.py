@@ -1,5 +1,8 @@
 import PySimpleGUI as sg
 
+from Repozytorium.bazaDanychStrategy.enumPath import SERWIS_PATH
+from backend.servis.abstract.abstractCrateTable import create_table
+from backend.servis.serwisSerwis.serwis import zwroc_tabele
 from frondend.konfiuguracja.theme.theme import globalTheme
 
 
@@ -18,6 +21,7 @@ def okno9():
     # button_size = (6, 3)
     layout = [
         [poleTytulowe9()],
+        zwroc_tabele(),
         [sg.Text('Podaj numer samochodu naprawionego '), sg.Input(key='NaprawionySamochod'), sg.Ok(key='OKOkno9', size=(20, 1))],
 
 
