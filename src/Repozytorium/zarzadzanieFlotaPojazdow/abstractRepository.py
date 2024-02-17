@@ -20,6 +20,7 @@ def update_csv(new_data, PATH):
 
 def save_updated_data_to_csv(file_path, data):
     if not data:
+        #todo potem strategia wg file_path
         fieldnames = ['Id','IdSamochodu','Usterka']
     else:
         fieldnames = data[0].keys()

@@ -18,6 +18,16 @@ def zmiana_statusu(car_id, STATUS):
             car['StatusSamochodu'] = STATUS
             save_updated_data_to_csv(SAMOCHOD_PATH, data)  # Zapisz zaktualizowane dane do pliku
             break  # Zakończ pętlę po znalezieniu pasującego samochodu
+    print('brak statusu!')
+
+def zmiana_dodanie_kierowcy(car_id, AktualnyKierowca, PlanowanyPowrot):
+    data = read_csv(SAMOCHOD_PATH)
+    for car in data:
+        if car['Id'] == car_id:
+            car['AktualnyKierowca'] = AktualnyKierowca
+            car['PlanowanyPowrot'] = PlanowanyPowrot
+            save_updated_data_to_csv(SAMOCHOD_PATH, data)  # Zapisz zaktualizowane dane do pliku
+            break  # Zakończ pętlę po znalezieniu pasującego samochodu
 
 
 def zapisz_dane(dane_po_usunieciu):

@@ -2,8 +2,10 @@
 import PySimpleGUI as sg
 
 from src.Repozytorium.bazaDanychStrategy.enumPath import SAMOCHOD_PATH, KIEROWCA_PATH
+from src.Repozytorium.bazaDanychStrategy.enumStatusSamochodu import ENUM_W_UZYCIU, ENUM_DOSTEPNY
 from src.backend.servis.abstract.abstractDodajDaneServices import add_data_from_json
-from src.backend.servis.serwisSerwis.serwis import obsluga_zglos_usterke, obsluga_usun_usterke
+from src.backend.servis.serwisSerwis.serwis import obsluga_zglos_usterke, obsluga_usun_usterke, zmiana_dodanie_kierowcy, \
+    zmiana_statusu
 from src.frondend.oknaGlowne.okno10.okno import okno10
 from src.frondend.oknaGlowne.okno2.okno import okno2
 from src.frondend.oknaGlowne.okno3.okno import okno3
@@ -26,11 +28,14 @@ def start():
         window = okno2Przyciski(event, window)
         window = okno3Obsluga(event, values, window)
         window = okno4Obsluga(event, values, window)
+        window = okno7Obsluga(event, values, window)
         window = okno10Obsluga(event, values, window)
+        window = okno8Obsluga(event, values, window)
+        window = okno8ObslugaUsterka(event, window)
         window = okno9przyciskUsunUsterke(event, values, window)
         # window = okno5Obsluga(event, window)
         window = przyciskPowrot(event, window)
-
+        print(event, values)
     window.close()
 
 
@@ -49,6 +54,12 @@ def przejdzDoOknaGlownego(window):
 def przejdzDoFlotyPojazdow(window):
     window.close()  # Zamknij aktualne okno (okno2)
     window = okno5()  # Otwórz okno3 jako nowe okno
+    return window
+
+
+def przejdzZglosUsterke(window):
+    window.close()  # Zamknij aktualne okno (okno2)
+    window = okno10()  # Otwórz okno3 jako nowe okno
     return window
 
 
@@ -117,6 +128,28 @@ def okno9przyciskUsunUsterke(event, values, window):
         print(event, values)
         obsluga_usun_usterke(values)
         window = przejdzDoFlotyPojazdow(window)
+    return window
+
+
+def okno7Obsluga(event, values, window):
+    if event == 'OKOkno7':
+        zmiana_dodanie_kierowcy(values['NumerSamochodu'], values['NumerKierowcy'], values['DataPowrotu'])
+        zmiana_statusu(values['NumerSamochodu'], ENUM_W_UZYCIU)
+        window = przejdzDoFlotyPojazdow(window)
+    return window
+
+
+def okno8Obsluga(event, values, window):
+    if event == 'OKOkno8':
+        zmiana_dodanie_kierowcy(values['NumerSamochodu'], '', '')
+        zmiana_statusu(values['NumerSamochodu'], ENUM_DOSTEPNY)
+        window = przejdzDoFlotyPojazdow(window)
+    return window
+
+
+def okno8ObslugaUsterka(event, window):
+    if event == 'ZglosUsterke':
+        window = przejdzZglosUsterke(window)
     return window
 
 

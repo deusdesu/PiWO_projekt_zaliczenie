@@ -42,7 +42,6 @@ def generate_table_from_json():
         row['Marka'] = marka
         row['Model'] = model
         row['Numer rejestracyjny'] = numerRej
-        print(row)
     return serwis_dane
 
 def create_extended_table_for_serwis():

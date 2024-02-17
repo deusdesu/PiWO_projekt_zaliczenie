@@ -1,3 +1,4 @@
-Id,MarkaSamochodu,ModelSamochodu,Kolor,NumerRejestracyjny,NumerVIN,DataUbezpieczeniaPoczatek,DataUbezpieczeniaKoniec,Ubezpieczyciel,NrPolisy,PoprzedniPrzegladTechniczny,NastepnyPrzegladTechniczny,StanWlasnosci,Przebieg,ObecnaLokalizacja,StatusSamochodu,TypPaliwa,SrednieSpalanie,SkrzyniaBiegow,DystansDoPrzejechania
-1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1auto1,auto1,auto1,SERWIS,auto1,auto1,auto1,auto1
-2,auto2,auto2auto2auto2,auto2,auto2,auto2,auto2auto2,auto2,auto2,auto2,auto2,auto2,auto2,auto2auto2,auto2,DOSTEPNY,auto2auto2,auto2,auto2,
+Id,MarkaSamochodu,ModelSamochodu,Kolor,NumerRejestracyjny,NumerVIN,DataUbezpieczeniaPoczatek,DataUbezpieczeniaKoniec,Ubezpieczyciel,NrPolisy,PoprzedniPrzegladTechniczny,NastepnyPrzegladTechniczny,StanWlasnosci,Przebieg,ObecnaLokalizacja,StatusSamochodu,TypPaliwa,SrednieSpalanie,SkrzyniaBiegow,DystansDoPrzejechania,AktualnyKierowca,PlanowanyPowrot
+1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1auto1,auto1,auto1,DOSTEPNY,auto1,auto1,auto1,auto1,,
+2,auto2,auto2auto2auto2,auto2,auto2,auto2,auto2auto2,auto2,auto2,auto2,auto2,auto2,auto2,auto2auto2,auto2,DOSTEPNY,auto2auto2,auto2,auto2,,,
+3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,,

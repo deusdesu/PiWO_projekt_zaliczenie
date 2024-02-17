@@ -17,10 +17,10 @@ def okno8():
     # button_size = (6, 3)
     layout = [
         [poleTytulowe8()],
-        [sg.Text('Podaj numer samochodu '), sg.Push(), sg.Input(key='NumerKierowcy')],
-        [sg.Text('Podaj liczbę przejechanych kilometrów '), sg.Push(), sg.Input(key='NumerSamochodu')],
+        [sg.Text('Podaj numer samochodu '), sg.Push(), sg.Input(key='NumerSamochodu')],
+        [sg.Text('Podaj liczbę przejechanych kilometrów '), sg.Push(), sg.Input(key='przejechaneKilometry')],
 
-        [sg.Button('Zgłoś usterkę' ,key='Usterka3', size=(20, 1))],
+        [sg.Button('Zgłoś usterkę' ,key='ZglosUsterke', size=(20, 1))],
 
 
         [sg.Button('Zdaj' ,key='OKOkno8', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
