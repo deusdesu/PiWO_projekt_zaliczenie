@@ -35,7 +35,6 @@ def start():
         window = okno9przyciskUsunUsterke(event, values, window)
         # window = okno5Obsluga(event, window)
         window = przyciskPowrot(event, window)
-        print(event, values)
     window.close()
 
 
@@ -65,35 +64,27 @@ def przejdzZglosUsterke(window):
 
 def okno2Przyciski(event, window):
     if event == '3':
-        print('Dodaj nowy samochód')
         window.close()  # Zamknij aktualne okno (okno2)
         window = okno3()  # Otwórz okno3 jako nowe okno
     if event == '4':
-        print('Dodaj nowego kierowcę')
         window.close()  # Zamknij aktualne okno (okno4)
         window = okno4()  # Otwórz okno4 jako nowe okno
     if event == '5':
-        print('Przegląd floty')
         window.close()  # Zamknij aktualne okno (okno5)
         window = okno5()  # Otwórz okno5 jako nowe okno
     if event == '6':
-        print('Przegląd kierowców')
         window.close()  # Zamknij aktualne okno (okno6)
         window = okno6()  # Otwórz okno6 jako nowe okno
     if event == '7':
-        print('Podjęcie samochodu')
         window.close()  # Zamknij aktualne okno (okno7)
         window = okno7()  # Otwórz okno6 jako nowe okno
     if event == '8':
-        print('Zwrot samochodu')
         window.close()  # Zamknij aktualne okno (okno8)
         window = okno8()  # Otwórz okno6 jako nowe okno
     if event == '9':
-        print('Serwis')
         window.close()  # Zamknij aktualne okno (okno8)
         window = okno9()  # Otwórz okno6 jako nowe okno
     if event == '10':
-        print('Zgłoś usterkę')
         window.close()  # Zamknij aktualne okno (okno8)
         window = okno10()  # Otwórz okno6 jako nowe okno
     return window
@@ -102,7 +93,6 @@ def okno2Przyciski(event, window):
 def okno3Obsluga(event, values, window):
     if event == 'OKOkno3':
         add_data_from_json(values, SAMOCHOD_PATH)
-        print(values)
         window = przejdzDoOknaGlownego(window)
     return window
 
@@ -110,14 +100,12 @@ def okno3Obsluga(event, values, window):
 def okno4Obsluga(event, values, window):
     if event == 'OKOkno4':
         add_data_from_json(values, KIEROWCA_PATH)
-        print(values)
         window = przejdzDoOknaGlownego(window)
     return window
 
 
 def okno10Obsluga(event, values, window):
     if event == 'OKOkno10':
-        print('przejdz do serwisu')
         obsluga_zglos_usterke(values)
         window = przejdzDoFlotyPojazdow(window)
     return window
@@ -125,7 +113,6 @@ def okno10Obsluga(event, values, window):
 
 def okno9przyciskUsunUsterke(event, values, window):
     if event == 'OKOkno9':
-        print(event, values)
         obsluga_usun_usterke(values)
         window = przejdzDoFlotyPojazdow(window)
     return window

@@ -24,7 +24,7 @@ def okno5():
         create_table_from_database(SAMOCHOD_PATH),
 
 
-        [sg.OK(key='OKOkno5', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
+        [sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
 
     ]
     return zwrocOkno('Converter', layout)

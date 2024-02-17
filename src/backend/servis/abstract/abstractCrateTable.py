@@ -29,13 +29,8 @@ def podajDaneTegoAuta(idSamochodu, samochod_dane):
 
 
 def generate_table_from_json():
-    # pobrać dane z bazy serwis
-    # pobrać dane z bazy samochod
     serwis_dane = read_csv(SERWIS_PATH)
     samochod_dane = read_csv(SAMOCHOD_PATH)
-    # print('serwis_dane',serwis_dane)
-    # print('samochod_dane',samochod_dane)
-    # dodać do serwisu numer rej
 
     for row in serwis_dane:
         marka, model, numerRej = podajDaneTegoAuta(row['IdSamochodu'], samochod_dane)
