@@ -3,11 +3,13 @@ from frondend.konfiuguracja.theme.theme import globalTheme
 
 
 def poleTytulowe2():
-    return sg.Text('Okno decyzji',
+    return sg.Text('Okno decyzji'.center(30),
                    key='oknoDecyzji',
                    font='Franklin 26',
-                   pad=(10, 20)
+                   pad=(10, 20),
+                   justification='center'
                    )
+
 
 
 def okno2():
