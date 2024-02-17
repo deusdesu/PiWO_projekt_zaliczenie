@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 import PySimpleGUI as sg
 
-from Repozytorium.bazaDanychStrategy.enumPath import SAMOCHOD_PATH, KIEROWCA_PATH, SERWIS_PATH
-from Repozytorium.bazaDanychStrategy.enumStatusSamochodu import ENUM_SERWIS
-from Repozytorium.zarzadzanieFlotaPojazdow.abstractRepository import update_csv
-from backend.servis.abstract.abstractDodajDaneServices import add_data_from_json
-from backend.servis.serwisSerwis.serwis import obsluga_zglos_usterke, obsluga_usun_usterke
-from frondend.oknaGlowne.okno10.okno import okno10
-from frondend.oknaGlowne.okno2.okno import okno2
-from frondend.oknaGlowne.okno3.okno import okno3
-from frondend.oknaGlowne.okno4.okno import okno4
-from frondend.oknaGlowne.okno5.okno import okno5
-from frondend.oknaGlowne.okno6.okno import okno6
-from frondend.oknaGlowne.okno7.okno import okno7
-from frondend.oknaGlowne.okno8.okno import okno8
-from frondend.oknaGlowne.okno9.okno import okno9
+from src.Repozytorium.bazaDanychStrategy.enumPath import SAMOCHOD_PATH, KIEROWCA_PATH
+from src.backend.servis.abstract.abstractDodajDaneServices import add_data_from_json
+from src.backend.servis.serwisSerwis.serwis import obsluga_zglos_usterke, obsluga_usun_usterke
+from src.frondend.oknaGlowne.okno10.okno import okno10
+from src.frondend.oknaGlowne.okno2.okno import okno2
+from src.frondend.oknaGlowne.okno3.okno import okno3
+from src.frondend.oknaGlowne.okno4.okno import okno4
+from src.frondend.oknaGlowne.okno5.okno import okno5
+from src.frondend.oknaGlowne.okno6.okno import okno6
+from src.frondend.oknaGlowne.okno7.okno import okno7
+from src.frondend.oknaGlowne.okno8.okno import okno8
+from src.frondend.oknaGlowne.okno9.okno import okno9
 
 
 def start():
