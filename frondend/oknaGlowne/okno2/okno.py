@@ -16,11 +16,13 @@ def okno2():
     # button_size = (6, 3)
     layout = [
         [poleTytulowe2()],
-        [sg.Button('Dodaj nowy samochód', key='3', expand_x=True),
-         sg.Button('Dodaj nowego kierowcę', key='4', expand_x=True)],
-        [sg.Button('Przegląd floty', key='5', expand_x=True), sg.Button('Przegląd kierowców', key='6', expand_x=True)],
-        [sg.Button('Serwis', key='9', expand_x=True), sg.Button('Zgłoś usterkę', key='10', expand_x=True)],
-        [sg.Button('Podjęcie samochodu', key='7', expand_x=True), sg.Button('Zwrot samochodu', key='8', expand_x=True)],
+        [sg.Button('Dodaj nowy samochód', key='3', size=(20, 1)), sg.Push(),
+         sg.Button('Dodaj nowego kierowcę', key='4', size=(20, 1))],
+        [sg.Button('Przegląd floty', key='5', size=(20, 1)), sg.Push(),
+         sg.Button('Przegląd kierowców', key='6', size=(20, 1))],
+        [sg.Button('Serwis', key='9', size=(20, 1)), sg.Push(), sg.Button('Zgłoś usterkę', key='10', size=(20, 1))],
+        [sg.Button('Podjęcie samochodu', key='7', size=(20, 1)), sg.Push(),
+         sg.Button('Zwrot samochodu', key='8', size=(20, 1))],
 
     ]
     return sg.Window('Converter', layout)
