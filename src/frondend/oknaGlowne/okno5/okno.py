@@ -6,6 +6,7 @@ from src.backend.servis.abstract.abstractCrateTable import create_table_from_dat
 from src.frondend.konfiuguracja.theme.theme import globalTheme
 from src.frondend.logo.logoHeader import zwrocOkno
 
+
 def poleTytulowe5():
     return sg.Text('Przegląd floty',
                    key='PrzegladFloty',
@@ -23,8 +24,8 @@ def okno5():
         [poleTytulowe5()],
         create_table_from_database(SAMOCHOD_PATH),
 
-
-        [sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
+        [sg.Button('Usuń samochód', key='usunsamochod', size=(20, 1)), sg.Push(),
+         sg.Button('Powrót', key='powrot', size=(20, 1))],
 
     ]
     return zwrocOkno('Converter', layout)

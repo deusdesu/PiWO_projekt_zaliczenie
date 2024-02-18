@@ -38,7 +38,6 @@ def okno3():
         [sg.Text('skrzynia biegów '), sg.Push(), sg.Input(key='SkrzyniaBiegow')],
         [sg.Text('dystans do przejechania '), sg.Push(), sg.Input(key='DystansDoPrzejechania')],
 
-        [sg.Button('Dodaj', key='OKOkno3'), sg.Button('Powrót', key='powrot', expand_x=True)],
-
+        [sg.Button('Dodaj', key='OKOkno3', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1))],
     ]
     return zwrocOkno('Converter', layout)

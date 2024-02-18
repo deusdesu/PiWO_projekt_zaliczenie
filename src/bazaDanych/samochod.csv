@@ -1,4 +1,5 @@
 Id,MarkaSamochodu,ModelSamochodu,Kolor,NumerRejestracyjny,NumerVIN,DataUbezpieczeniaPoczatek,DataUbezpieczeniaKoniec,Ubezpieczyciel,NrPolisy,PoprzedniPrzegladTechniczny,NastepnyPrzegladTechniczny,StanWlasnosci,Przebieg,ObecnaLokalizacja,StatusSamochodu,TypPaliwa,SrednieSpalanie,SkrzyniaBiegow,DystansDoPrzejechania,AktualnyKierowca,PlanowanyPowrot
-1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1,auto1auto1,auto1,auto1,DOSTEPNY,auto1,auto1,auto1,auto1,,
-2,auto2,auto2auto2auto2,auto2,auto2,auto2,auto2auto2,auto2,auto2,auto2,auto2,auto2,auto2,auto2auto2,auto2,DOSTEPNY,auto2auto2,auto2,auto2,,,
-3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,test3,,
+1,Opel,Astra D,Zielony,WL 44551,W OL OAHLO 8 6 5 111111,10.10.2023,10.10.2024,PZU,123456,10.10.2023,10.10.2024,leasing,53 240,Garaz 1,SERWIS,ON,8,manualna,230,2,20.02.2024
+2,Suzuki,Swift,Czarny,LLB 153442,W OL OAHLO 4 5 123456,10.10.2023,10.10.2024,Warta,995473,06.10.2023,06.10.2024,wlasnosc,12 544,Garaz 2,Dostepny,Benzyna,"5,6",manualna,190,,
+3,Nissan,Quashquai,Srebrny,WJ 2333221,W OL OAHLO 8 2 4 726351,04.12.2023,04.12.2024,PZU,3224334,04.11.2023,04.11.2024,leasing,34 554,Garaz 1,Dostepny,ON,"7,8",automatyczna,400,,
+4,Opel,Vectra,Zielony,WW 112233,W OL OAHLO 2 7 6 544544,11.11.2023,11.11.2024,PZU,1112223,11.11.2023,11.11.2024,wlasnosc,111 123,Garaz 2,leasing,GAZ,20,automat,300,,

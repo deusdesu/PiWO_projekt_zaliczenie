@@ -22,7 +22,8 @@ def okno6():
 
         create_table_from_database(KIEROWCA_PATH),
 
-        [sg.OK(key='OKOkno6', size=(20, 1)), sg.Push(), sg.Button('Powrót', key='powrot', size=(20, 1) )],
+        [sg.Button('Usuń kierowcę', key='usunkierowce', size=(20, 1)), sg.Push(),
+         sg.Button('Powrót', key='powrot', size=(20, 1))],
 
     ]
     return zwrocOkno('Converter', layout)
